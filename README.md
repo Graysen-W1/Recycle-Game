@@ -18,7 +18,7 @@ Drag–and–drop mini-game that teaches recycling habits:
 ## 💡 Inspiration
 I wanted to encourage good habits for keeping our planet clean. This project was inspired by the idea that small actions, like sorting recyclables, can make a big difference for Earth’s future.
 
-## 💻 Code Spotlight
+## 💻 Code Highlight
 ```js
 Array.from(gameTargets).forEach(el => {
     el.classList.remove('recycle','trash');
