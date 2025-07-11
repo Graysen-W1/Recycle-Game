@@ -4,7 +4,13 @@
 /* all imports go at the top ^ */
 
 body {
-  /* source: https://heropatterns.com/ */
+  /* https://www.w3schools.com/css/css_background.asp */
+  background: linear-gradient(rgba(0,123,255,0.55), rgba(0,123,255,0.55)),
+              url('../images/earth-background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
 .glass-navbar {
@@ -31,6 +37,26 @@ body {
   list-style-type: none;
   padding-top: 13px;
   font-family: "Outfit";
+}
+
+#resetGame {
+    color: white;
+    background-color: green;
+    border-style: solid;
+    border-radius: 5px;
+    padding: 7px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+
+/* https://www.w3schools.com/cssref/sel_hover.php */
+#resetGame:hover {
+    background-color: #006400;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .footer {
@@ -61,6 +87,158 @@ body {
   margin: 0;
 }
 
-.bi-arrow-right {
-  color: rgba(255, 0, 0, 1);
+/* https://www.w3schools.com/cssref/sel_nth-child.php */
+.gameTargets:nth-child(1) {
+  border: 3px solid #ffffff;
+}
+
+.gameTargets:nth-child(2) {
+  border: 3px solid #ffffff;
+}
+
+.gameTargets:nth-child(3) {
+  border: 3px solid #ffffff;
+}
+
+/* https://getbootstrap.com/docs/4.0/getting-started/introduction/ */
+.col-md-10.shadow {
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.2px);
+  -webkit-backdrop-filter: blur(4.2px);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+}
+
+#inputBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+/* https://www.w3schools.com/cssref/pr_gap.php */
+#nameBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+#displayPlayerName {
+  margin-right: 5px;
+}
+
+/* https://www.w3schools.com/css/css_align.asp */
+.col-md-2.shadow {
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 250px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.2px);
+  -webkit-backdrop-filter: blur(4.2px);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+}
+
+/* https://www.w3schools.com/css/css3_flexbox.asp */
+.col-md-2.shadow .d-flex {
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex-direction: row !important;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.col-md-2.shadow .btn-warning {
+  background-color: #2196f3 !important;
+  border-color: #1976d2 !important;
+  color: white !important;
+}
+
+.col-md-2.shadow .btn-warning:hover {
+  background-color: #1976d2 !important;
+  border-color: #1565c0 !important;
+}
+
+/* Icon backgrounds for game targets */
+.gameTargets {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;              /* enables centering */
+  flex-direction: column;
+  justify-content: flex-start;/* text appears above icon */
+  align-items: center;
+  color: #ffffff;             /* white text */
+  text-align: center;
+  font-weight: 600;
+  padding-top: 5px;           /* small offset from top */
+  text-shadow: 0 1px 2px rgba(0,0,0,0.6); /* improve readability */
+}
+
+.recycle {
+  background-image: url('../images/bin.svg'); 
+}
+
+.trash {
+  background-image: url('../images/trash.svg'); 
+}
+
+/* Larger player-name entry controls */
+#inputBox .input-group-text,
+#nameBox .input-group-text,
+#goBox .input-group-text {
+  font-size: 20px;
+  padding: 10px 14px;
+}
+
+#enteredPlayerName {
+  font-size: 20px;
+  padding: 10px 14px;
+}
+
+#submitPlayerName,
+#playGame {
+  font-size: 20px; 
+  padding: 10px 20px; 
+}
+
+.row.border-info {
+  border: none !important;
+}
+
+#gameBoard {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.2px);
+  -webkit-backdrop-filter: blur(4.2px);
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  position: relative; 
+}
+
+.redBorder {
+  border: 2px solid #ff0000 !important;
+  box-shadow: 0 0 4px rgba(255, 0, 0, 0.7);
+}
+
+.greenBorder {
+  border: 2px solid #28a745 !important; /* Bootstrap's success green */
+  box-shadow: 0 0 4px rgba(40, 167, 69, 0.7);
 }

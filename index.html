@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>awesomeGame</title>
+  <title>Recycle Game</title>
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 
@@ -17,7 +17,7 @@
   <!-- nav bar -->
   <nav class="navbar navbar-expand-lg navbar-light glass-navbar">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#profile-icon"><i class="bi bi-person-bounding-box"></i></a>
+      <section class="rectangle" id="profile-icon"></section>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -27,7 +27,7 @@
             <a class="nav-link active" aria-current="page" href="#home">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="images/funny-cat-coding.jpg" target="_blank">Cat Coding</a>
+            <a class="nav-link" href="images/cat-recycle.jpg" target="_blank">Cat Recycling</a>
           </li>
         </ul>
       </div>
@@ -37,40 +37,76 @@
  <div class="container-fluid vh-100">
 
   <!-- game control row-->
-  <div class="row m-2 p-3">
-    <div class="col-md-12 border border-2 ">
-      game stuff / controls goes here 
-    </div>
-  </div><!-- closes game control row -->
+<div class="row m-1 p-3">
+  <div class="col-md-10 shadow">
+    <!-- rules -->
+    <div class="d-flex m-2">
+     
+      <!-- Enter Player Name -->
+      <div id="inputBox" class="d-flex justify-content-center">
+        <span class="input-group-text">Player Name:</span>
+        <input id="enteredPlayerName" class="form-control" placeholder="Enter your name...">
+        <button id="submitPlayerName" class="btn btn-danger btn-md">Submit</button> 
+      </div>
+   
+      <!-- Greeting -->
+      <div id="nameBox" class="d-flex">
+        <span id="displayPlayerName" class="input-group-text">Enter player name...</span>
+        <button id="playGame" type="button" class="btn btn-danger">Play!</button>  
+      </div>
+    
+      <!-- Drag Bottle -->
+      <div id="goBox" class="d-flex">
+         <span class="input-group-text">Drag the bottle to the recycle bin!</span>
+
+      </div>
+    </div> 
+    <span class="float-end align-bottom">
+      <a id="resetGame" class="fst-italic">reset game</a>
+    </span>
+  </div><!-- closes rules cols -->
   
+  <div class="col-md-2 shadow">
+    <!-- Score Box -->
+    <div class="d-flex flex-column align-items-center justify-content-center  bg-light ms-auto"
+        style="width: 900px; height: 90px; min-width: 90px;">
+      <span class="fw-bold fs-5">Score</span>
+      <span class="fs-4"><span id="playerScore">0</span></span>
+      <button id="playAgain" type="button" class="btn btn-warning btn-sm mt-1">play again</button>
+    </div>
+  </div><!-- closes score col -->
+</div><!-- closes game control row -->
+
   <!-- game board row -->
-  <div class="row m-4 h-75 border border-3 border-info rounded-3">
+  <div class="row m-1 h-75 border border-3 border-info rounded-3">
  
     <!-- the game board -->
     <div id="gameBoard" class="col-md-12 h-100">
 
-        <!-- game piece, searched: cat pic no bg-->
-        <img id="gamePiece" class="h-25 float-start" src="images/plasticBottle.png" alt="bottle">
+      <img id="gamePiece" class="h-25 float-start" src="images/plasticBottle.png" alt="bottle">
        
-         <!-- three targets -->
-         <div class="h-100 d-flex flex align-items-end gap-3 justify-content-center pe-5 pb-5">
-            <div class="gameTargets bg-primary rounded h-25 w-25"></div>
-            <div class="gameTargets bg-warning rounded h-25 w-25"></div>
-            <div class="gameTargets bg-success rounded h-25 w-25"></div>
-          </div>
+      <!-- three targets -->
+      <div class="h-100 d-flex flex-column align-items-end gap-3 justify-content-center pe-5">
+        <div id="blueHouse" class="gameTargets bg-primary rounded h-25 w-25"></div>
+        <div id="yellowHouse" class="gameTargets bg-warning rounded h-25 w-25"></div>
+        <div id="greenHouse" class="gameTargets bg-success rounded h-25 w-25"></div>
+      </div>
 
-        </div><!-- closes column -->
-      </div><!-- closes game board row -->
-
-    </div><!-- closes big container -->
+    </div>  <!-- closes column -->
+  </div> <!-- closes game board row -->
 
 
 
   <!-- footer -->
   <footer>
     <div class="footer" style="position: fixed; bottom: 0px;">
-      <p>Thanks for stopping by my page! Check out my wireframe <i class="bi bi-arrow-right"></i></p>
-      <a class="textbody" target="_blank" href="images/wireframeBlock2.jpg">wireframe</a>
+      <p>Thanks for stopping by my page! Check these out! <i class="bi bi-arrow-right"></i></p>
+      <a class="textbody" target="_blank" href="https://github.com/Graysen-W1/Graysen-W1">github profile <i class="bi bi-dash"></i></a>
+      <a class="textbody" target="_blank" href="https://graysen-w1.github.io/Graysen-W1/">dev profile <i class="bi bi-dash"></i></a>
+      <a class="textbody" target="_blank" href="https://github.com/Graysen-W1/Recycle-Game">source code <i class="bi bi-dash"></i></a>
+      <a class="textbody" target="_blank" href="images/wireframeBlock2.jpg">wireframe <i class="bi bi-dash"></i></a>
+      <a class="textbody" target="_blank" href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fgraysen-w1.github.io%2FRecycle-Game%2F">validator <i class="bi bi-dash"></i></a>
+      <a class="textbody" target="_blank" href="https://wave.webaim.org/report#/https://graysen-w1.github.io/Recycle-Game/">wave</a>
     </div>
   </footer>
 
