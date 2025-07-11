@@ -1,8 +1,6 @@
 # ♻️ Recycle Game
 *Created: July 2025 — CIS 376 SUMMER 2025 — Block 02 Project*
 
-
-
 ## 🎯 Objective
 Drag–and–drop mini-game that teaches recycling habits:
 
@@ -12,19 +10,13 @@ Drag–and–drop mini-game that teaches recycling habits:
 4. Score increments for a correct drop, decrements for a miss.
 5. Reset or play again as many times as you like.
 
-
-
 ## 🌐 Resources Used
 - [W3Schools](https://www.w3schools.com/)
 - [Bootstrap](https://getbootstrap.com/)
 - [jQuery](https://jquery.com/)
 
-
-
 ## 💡 Inspiration
 I wanted to encourage good habits for keeping our planet clean. This project was inspired by the idea that small actions, like sorting recyclables, can make a big difference for Earth’s future.
-
-
 
 ## 💻 Code Spotlight
 ```js
