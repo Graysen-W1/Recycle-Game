@@ -1,5 +1,5 @@
 # ♻️ Recycle Game
-*Created: July 2025 — CIS 376 SUM 2025 · Block 02 Project*
+*Created: July 2025 — CIS 376 SUMMER 2025 — Block 02 Project*
 
 
 
@@ -28,21 +28,20 @@ I wanted to encourage good habits for keeping our planet clean. This project was
 
 ## 💻 Code Spotlight
 ```js
-function setKittysHouse(){
-  gameTargets = document.getElementsByClassName('gameTargets');
-  // randomly pick 0–2 for the recycle bin
-  winningHouse = Math.floor(Math.random() * gameTargets.length);
-
-  // wipe previous classes
-  Array.from(gameTargets).forEach(el => el.classList.remove('recycle','trash'));
-
-  // label targets: one recycle, two trash
-  Array.from(gameTargets).forEach((el, idx) => {
-    el.classList.add(idx === winningHouse ? 'recycle' : 'trash');
+Array.from(gameTargets).forEach(el => {
+    el.classList.remove('recycle','trash');
   });
+
+  Array.from(gameTargets).forEach((el,idx) => {
+    if(idx === winningTargetIndex){
+      el.classList.add('recycle');
+    } else {
+      el.classList.add('trash');
+    }
+  });;
 }
 ```
-**Why this is cool**
+**Why this is cool:**
 
 This game uses arrays to randomize where the recycle bin and trash cans appear each round; this makes the game less predictable. 
 
